@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "likes",
+  "info": {
+    "name": "Like"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "like": {
+      "type": "boolean"
+    },
+    "profile": {
+      "model": "profile"
+    },
+    "post": {
+      "via": "likes",
+      "model": "post"
+    },
+    "comment": {
+      "via": "likes",
+      "model": "comment"
+    }
+  }
+}

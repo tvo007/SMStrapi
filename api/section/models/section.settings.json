@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sections",
+  "info": {
+    "name": "Section"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "posts": {
+      "via": "section",
+      "collection": "post"
+    },
+    "sectionName": {
+      "type": "string"
+    }
+  }
+}
